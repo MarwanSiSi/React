@@ -1,0 +1,52 @@
+{
+  "cities": [
+    {
+      "cityName": "Madrid",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2027-07-15T08:22:53.976Z",
+      "notes": "Went to the Santiago Bernabéu Stadium and saw Real Madrid play!",
+      "position": {
+        "lat": 40.416775,
+        "lng": -3.70379
+      },
+      "id": "17806751"
+    },
+    {
+      "cityName": "Berlin",
+      "country": "Germany",
+      "emoji": "🇩🇪",
+      "date": "2027-02-12T09:24:11.863Z",
+      "notes": "Amazing 😃",
+      "position": {
+        "lat": 52.520008,
+        "lng": 13.404954
+      },
+      "id": "98443197"
+    },
+    {
+      "cityName": "Faro",
+      "country": "Portugal",
+      "emoji": "🇵🇹",
+      "date": "2026-12-31T15:59:59.138Z",
+      "notes": "Filled with art and music!",
+      "position": {
+        "lat": 37.019356,
+        "lng": -7.93044
+      },
+      "id": "1234"
+    },
+    {
+      "cityName": "Barcelona",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2027-07-15T08:22:53.976Z",
+      "notes": "Such a colorful city!",
+      "position": {
+        "lat": 41.3828939,
+        "lng": 2.1774322
+      },
+      "id": "5678"
+    }
+  ]
+}
