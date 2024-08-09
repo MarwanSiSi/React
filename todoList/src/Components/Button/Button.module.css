@@ -1,0 +1,31 @@
+.add {
+  background-color: #2de033;
+  color: black;
+  font-weight: bold;
+  font-size: medium;
+  padding: 5px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.2s;
+}
+
+.add:hover {
+  background-color: #0ab010;
+}
+
+.delete {
+  background-color: #fe2718;
+  color: black;
+  padding: 5px 20px;
+  font-weight: bold;
+  font-size: medium;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.delete:hover {
+  background-color: #a24b4b;
+}
