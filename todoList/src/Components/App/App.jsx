@@ -1,4 +1,4 @@
-import TodoContainer from "../Container/TodoContainer";
+import TodoContainer from "../TodoContainer/TodoContainer";
 import styles from "./App.module.css";
 
 function App() {
