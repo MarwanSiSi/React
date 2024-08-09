@@ -6,16 +6,19 @@
   gap: 10px;
   padding: 8px;
   margin-bottom: 5px;
-  border: 1px solid #876969;
-  border-radius: 8px;
+  border-bottom: 1px solid #876969;
   transition: all 0.3s;
   word-wrap: normal;
+  background-color: white;
 }
 p {
   margin: 0px;
   padding: 0;
+  font-weight: 500;
+  font-size: large;
+  color: gray;
 }
 
-.container:hover {
+/* .container:hover {
   background-color: #f0f0f0;
-}
+} */

@@ -1,23 +1,15 @@
 .test {
   width: 100%;
-  grid-row: 2;
+  grid-row: 1;
+  margin-top: 10px;
   grid-column: 2;
   border-radius: 10px; /* Adjust the value to change the roundness of the corners */
 }
 
-h2 {
-  font-size: 1.5rem;
-  margin: 10px;
+h1 {
   padding: 0;
-  text-decoration: underline;
+  color: white;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.empty {
-  display: flex;
-  font-size: medium;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+  text-align: center;
   font-weight: bold;
 }

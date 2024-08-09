@@ -4,6 +4,7 @@ function InputField({ input, handleInputChange, handleAddTodo }) {
   return (
     <form onSubmit={handleAddTodo}>
       <input
+        placeholder="what do you want to do"
         className={styles.input}
         value={input}
         onChange={handleInputChange}

@@ -1,0 +1,12 @@
+.bin {
+  width: 30px;
+  height: 30px;
+  fill: black;
+  transition: all 0.3s;
+}
+
+.bin:hover {
+  cursor: pointer;
+  fill: red;
+  transform: translateY(-5px);
+}

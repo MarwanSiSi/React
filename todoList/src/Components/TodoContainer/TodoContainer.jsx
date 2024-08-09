@@ -28,14 +28,14 @@ function TodoContainer() {
 
   return (
     <div className={styles.test}>
-      <h2>Todo List</h2>
-      {empty && <p className={styles.empty}>Start by adding a Todo 😊</p>}
-      <List list={list} handleDeleteTodo={handleDeleteTodo} />
+      <h1>TO-DO LIST</h1>
+
       <InputButtonContainer
         handleAddTodo={handleAddTodo}
         handleInputChange={handleInputChange}
         input={input}
       />
+      <List empty={empty} list={list} handleDeleteTodo={handleDeleteTodo} />
     </div>
   );
 }

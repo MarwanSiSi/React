@@ -10,7 +10,7 @@ function InputButtonConatiner({ input, handleAddTodo, handleInputChange }) {
         handleAddTodo={handleAddTodo}
         handleInputChange={handleInputChange}
       />
-      <Button handler={handleAddTodo}>Add</Button>
+      <Button handler={handleAddTodo}>ADD</Button>
     </div>
   );
 }

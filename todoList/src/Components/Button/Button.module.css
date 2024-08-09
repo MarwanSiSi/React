@@ -1,31 +1,20 @@
 .add {
-  background-color: #2de033;
-  color: black;
+  background-color: rgb(27, 55, 158);
+  color: white;
   font-weight: bold;
   font-size: medium;
-  padding: 5px 20px;
+  height: 30px;
+  width: 70px;
   border: none;
   cursor: pointer;
-  border-radius: 5px;
+  padding: 0;
+  border-radius: 2px;
   transition: all 0.2s;
+  margin-top: 10px;
+  margin-left: 50px;
+  margin-bottom: 10px;
 }
 
 .add:hover {
-  background-color: #0ab010;
-}
-
-.delete {
-  background-color: #fe2718;
-  color: black;
-  padding: 5px 20px;
-  font-weight: bold;
-  font-size: medium;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: all 0.3s;
-}
-
-.delete:hover {
-  background-color: #a24b4b;
+  opacity: 0.8;
 }
