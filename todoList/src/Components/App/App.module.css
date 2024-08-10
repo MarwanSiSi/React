@@ -1,6 +1,6 @@
 .mainDiv {
   display: grid;
-  background-color: rgb(97, 194, 233);
+  background-color: rgb(229, 232, 177);
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(3, 1fr);
   place-content: center;
