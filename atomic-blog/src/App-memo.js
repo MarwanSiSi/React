@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { memo, useMemo, useState } from "react";
 import { faker } from "@faker-js/faker";
 
 import { usePosts, PostProvider } from "./PostContext";
@@ -11,6 +11,13 @@ function createRandomPost() {
 }
 
 function App() {
+  const archiveOptions = useMemo(() => {
+    return {
+      show: false,
+      title: `Post archive in addition to main posts`,
+    };
+  }, []);
+
   return (
     //* 2) Wrap the components that need access to the context with the `PostContext.Provider` component. This component receives a `value` prop which is the value that will be provided to all its children.
     <PostProvider>
@@ -18,7 +25,7 @@ function App() {
         <Button />
         <Header />
         <Main />
-        <Archive />
+        <Archive archiveOptions={archiveOptions} />
         <Footer />
       </section>
     </PostProvider>
@@ -135,27 +142,26 @@ function List() {
           </li>
         ))}
       </ul>
-      <Test />
     </>
   );
 }
 
-function Archive() {
-  const { onAddPost } = usePosts();
+const Archive = memo(function Archive({ archiveOptions }) {
+  // const { onAddPost } = usePosts();
 
   // Here we don't need the setter function. We're only using state to store these posts because the callback function passed into useState (which generates the posts) is only called once, on the initial render. So we use this trick as an optimization technique, because if we just used a regular variable, these posts would be re-created on every render. We could also move the posts outside the components, but I wanted to show you this trick 😉
   const [posts] = useState(() =>
     // 💥 WARNING: This might make your computer slow! Try a smaller `length` first
-    Array.from({ length: 10000 }, () => createRandomPost())
+    Array.from({ length: 30000 }, () => createRandomPost())
   );
 
-  const [showArchive, setShowArchive] = useState(false);
+  const [showArchive, setShowArchive] = useState(archiveOptions.show);
 
   return (
     <aside>
       <h2>Post archive</h2>
       <button onClick={() => setShowArchive((s) => !s)}>
-        {showArchive ? "Hide archive posts" : "Show archive posts"}
+        {archiveOptions.title}
       </button>
 
       {showArchive && (
@@ -165,51 +171,17 @@ function Archive() {
               <p>
                 <strong>{post.title}:</strong> {post.body}
               </p>
-              <button onClick={() => onAddPost(post)}>Add as new post</button>
+              {/* <button onClick={() => onAddPost(post)}>Add as new post</button> */}
             </li>
           ))}
         </ul>
       )}
     </aside>
   );
-}
+});
 
 function Footer() {
   return <footer>&copy; by The Atomic Blog ✌️</footer>;
-}
-
-function SlowComponent() {
-  // If this is too slow on your maching, reduce the `length`
-  const words = Array.from({ length: 100_000 }, () => "WORD");
-  return (
-    <ul>
-      {words.map((word, i) => (
-        <li key={i}>
-          {i}: {word}
-        </li>
-      ))}
-    </ul>
-  );
-}
-function Counter({ children }) {
-  const [count, setCount] = useState(0);
-  return (
-    <div>
-      <h1>Slow counter?!?</h1>
-      <button onClick={() => setCount((c) => c + 1)}>Increase: {count}</button>
-      {children}
-    </div>
-  );
-}
-function Test() {
-  return (
-    <div>
-      <h1>Test</h1>
-      <Counter>
-        <SlowComponent />
-      </Counter>
-    </div>
-  );
 }
 
 export default App;
